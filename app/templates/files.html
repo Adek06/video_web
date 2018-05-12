@@ -11,7 +11,8 @@
 <body>
     {% for id in files_id %}
        <!--  <li><a href="http://{{my_ip}}:10001/static/files/video/{{item}}">{{item}}</a></li> -->
-       <li><a href="http://{{my_ip}}:10001/player/{{id}}">{{files_dirc[id][47:]}}</a></li>
+       <!-- <li><a href="http://{{my_ip}}:10001/player/{{id}}">{{files_dirc[id][47:]}}</a></li> -->
+       <li><a href="{{url_for('player',video_id=id)}}">{{files_dirc[id][47:]}}</a></li>
     {% endfor %}
 </body>
 </html>
